@@ -6,6 +6,8 @@
     <title>Checkout Mirror Fashion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap-flatly.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/inputmask-plugin.js"></script>
     <style>
             .navbar {
             margin: 0;
@@ -47,23 +49,23 @@
                 
                 <div class="panel-body">
 
-                <img src="img/produtos/foto2-<?= $_POST['cor'] ?>.png" class="img-thumbnail img-responsive hidden-xs">
-                    <dl>
-                        <dt>Produto</dt>
-                        <dd>Fuzzy cardigan</dd>
+                    <img src="img/produtos/foto2-<?= $_POST['cor'] ?>.png" class="img-thumbnail img-responsive hidden-xs">
+                        <dl>
+                            <dt>Produto</dt>
+                            <dd>Fuzzy cardigan</dd>
 
-                        <dt>Cor</dt>
-                        <dd>
-                            <?= $_POST['cor'] ?>
-                        </dd>
-                        
-                        <dt>Tamanho</dt>
-                        <dd>
-                            <?= $_POST['tamanho'] ?>
-                        </dd>
+                            <dt>Cor</dt>
+                            <dd>
+                                <?= $_POST['cor'] ?>
+                            </dd>
+                            
+                            <dt>Tamanho</dt>
+                            <dd>
+                                <?= $_POST['tamanho'] ?>
+                            </dd>
 
-                        <dt>Preço</dt>
-                        <dd>R$ 129,90</dd>
+                            <dt>Preço</dt>
+                            <dd>R$ 129,90</dd>
                     </dl>
                 </div><!-- Fim do panel body -->
             </div><!-- fim .panel -->
@@ -88,7 +90,7 @@
                         
                         <div class="form-group">
                             <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" data-mask="999.999.999-99"required>
                         </div>
 
                         <div class="checkbox">
@@ -101,7 +103,7 @@
                         <legend>Cartão de crédito</legend>
                         <div class="form-group">
                             <label for="numero-cartao">Número - CVV</label>
-                            <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+                            <input type="text" class="form-control" id="numero-cartao" name="numero-cartao" data-mask="9999 9999 9999 9999 - 999">
                         </div>
                         <div class="form-group">
                             <label for="bandeira-cartao">Bandeira</label>

@@ -52,8 +52,10 @@
                 <li>Menor preço do varejo, garantido.</li>
                 <li>Se você achar uma loja mais barata, leva o produto de graça.</li>
             </ul>
-
-
+        </section>
+        <section>
+            <h2>Endereço</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1057.8722781523604!2d-48.67639723783671!3d-26.895749500702667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8cc592c64f92f%3A0xbc28be56f812029c!2sR.+Manoel+Zeferino+Teixeira+-+S%C3%A3o+Jo%C3%A3o%2C+Itaja%C3%AD+-+SC!5e0!3m2!1spt-BR!2sbr!4v1515031063581" width="850" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
     </article>
     <?php include("rodape.php"); ?>

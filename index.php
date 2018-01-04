@@ -29,7 +29,6 @@ include("cabecalho.php"); ?>
                     </li>
                     <li>
                         <a href="#">Calças</a>
-                        
                     </li>
                     <li>
                         <a href="#">Saias</a>
@@ -52,6 +51,8 @@ include("cabecalho.php"); ?>
         <!-- Fim menú departamentos -->
 
         <img src="img/destaque-home.png" alt="Promoção: Big City Night">
+        <a href="#" class="pause"></a>
+        
 
     </div>
 
@@ -169,3 +170,28 @@ include("cabecalho.php"); ?>
 </body>
 
 </html>
+
+<script>
+    var banners = ["img/destaque-home.png", "img/destaque-home-2.png"];
+    var bannerAtual = 0;
+
+    function trocaBanner() {
+        bannerAtual = (bannerAtual + 1) % 2;
+        document.querySelector('.destaque img').src = banners[bannerAtual];
+    }
+
+    var timer = setInterval(trocaBanner, 4000);
+
+    var controle = document.querySelector('.pause');
+    controle.onclick = function () {
+        if (controle.className == 'pause')
+        {
+            clearInterval(timer);
+            controle.className = 'play';
+        } else {
+            timer = setInterval(trocaBanner, 4000);
+            controle.className = 'pause';
+        }
+        return false;
+    };
+</script>

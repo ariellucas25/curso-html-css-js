@@ -3,8 +3,21 @@
 $css_produto = '<link rel="stylesheet" href="css/produto.css">';
 $cabecalho_title = "Produto";
 include("cabecalho.php"); 
-
 ?>
+
+<style>
+    .tamanhos output {
+        display: inline-block;
+        height: 44px;
+        width: 44px;
+
+        line-height:44px;
+        text-align: center;
+        border: 3px solid #666;
+        border-radius: 50%;
+        color: #555; 
+    }
+</style>
 <div class="produto-back">
     <div class="container">
         <div class="produto">
@@ -29,6 +42,7 @@ include("cabecalho.php");
                 <fieldset class="tamanhos">
                     <legend>Escolha o tamanho:</legend>
                     <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
+                    <output for="tamanho" name="valortamanho">42</output>
                 </fieldset>
                 <input type="submit" class="comprar" value="comprar">
             </form>
@@ -68,3 +82,12 @@ include("cabecalho.php");
     </div>
 </div>
 <?php include("rodape.php"); ?>
+
+<script>
+    var inputTamanho = document.querySelector('[name=tamanho]')
+    var outputTamanho = document.querySelector('[name=valortamanho]')
+
+    inputTamanho.oninput = function (){
+        outputTamanho.value = inputTamanho.value
+    }
+</script>

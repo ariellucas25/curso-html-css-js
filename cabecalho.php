@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/mobile.css" media="(max-width: 939px)">
     <?php print @$css_produto; ?>
     <script src="main.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans|Bad+Script' rel="Stylesheet">
 </head>
 <header class="container">
         <h1>
